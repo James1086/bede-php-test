@@ -1,0 +1,47 @@
+This ZIP contains the site directory folder containing the index and supporting PHP files as well as an SQL database with the casino data and user login info.
+
+I've not used git to set up a project that’s ready to install so I can only apologise if this is not the installation process you are used to.
+
+The site is running live at www.nofussdesign.co.uk and uses all the files included in the git version. All the database connection information is located in libs/constants.php if you wish to update your version with new SQL info.
+
+The site has two users set up:
+
+ADMIN
+	user: admin
+	pass: testing
+
+USER
+	user: user
+	pass: testing
+
+
+
+A few notes on the process:
+
+The login passwords are stored as MD5 hashed values. My site doesn't have the latest PHP version to make use of the crypt() function to salt and hash the passwords for more security.
+
+To improve overall security I would have liked to research prepared statements when accessing the database data to prevent code injection. I'm still fairly new to SQL and its something I continue to improve upon.
+
+The postcode is converted to lat & long using this url that returns JSON data for the postcode:
+https://api.postcodes.io/postcodes/POSTCODEHERE
+
+I believe it is possible to do this via the Google Maps API but I wanted a faster solution than having to lean more of the API at the present moment.
+
+The maps displayed on the site do use the Google Maps API to display locations from the SQL queries and custom markers. This part of the API is easy to work with so it was an obvious choice for me.
+
+Testing to see if the user is logged in is done using sessions throughout the site, I would like to rely less on sessions but this was a simple solution.
+
+Additional casinos can be added through the sidebar that shows for the admin. When viewing a specific casino the edit fields are displayed in the side bar too.
+
+The site would need error checking and validation on all the fields as a further improvement. The postcode is verified using 3rd party code found here:
+http://stackoverflow.com/questions/15960184/united-kingdom-gb-postal-code-validation-without-regex/16303815
+This helpful answer was extremely useful to check that that the UK postcode is in a valid format before adding it to the database. I don't think I could have come up with a postcode validation function without extensive testing which I did not have the time to do.
+Bootstrap is used through the design to give some clean structure to the test site. It might be a test of PHP knowledge but it helps if it it looks good.
+
+Thank you for taking the time to consider this test. I'm learning many of the more advanced PHP techniques through self teaching so any insight into future improvements is greatly appreciated.
+
+Kind regards,
+
+James Castelow
+james.castelow@gmail.com
+tel: 07519225860
