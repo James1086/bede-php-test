@@ -39,3 +39,7 @@ This helpful answer was extremely useful to check that that the UK postcode is i
 Bootstrap is used through the design to give some clean structure to the test site. It might be a test of PHP knowledge but it helps if it it looks good.
 
 Thank you for taking the time to consider this test. I'm learning many of the more advanced PHP techniques through self teaching so any insight into future improvements is greatly appreciated.
+
+Regards,
+
+James C
